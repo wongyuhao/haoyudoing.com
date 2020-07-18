@@ -4,7 +4,7 @@ import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
 import logo from '../images/logo.svg'
 
 
-export default function  Header(){
+export default function  HeaderAlt(){
   return(
   <Navbar bg="white" expand="lg" className="sticky-top">
   <Navbar.Brand> 
@@ -18,24 +18,7 @@ export default function  Header(){
         
     />
     </Link> </Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
-      
-      <NavDropdown title="Projects" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.2">Events</NavDropdown.Item>
-        <NavDropdown.Divider></NavDropdown.Divider>
-        <NavDropdown.Item href="#action/3.1">Code</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Mechanical Keyboards</NavDropdown.Item>
 
-      </NavDropdown>
-
-      <Nav.Link ><Link to="/projects">About</Link></Nav.Link>
-
-      <Nav.Link ><Link to="/projects">Contact</Link></Nav.Link>
-    </Nav>
-    
-  </Navbar.Collapse>
 </Navbar>
 )
   }
