@@ -9,7 +9,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-fontawesome-css`,
-    'gatsby-plugin-page-load-delay',
+   
   
   ]
 }
