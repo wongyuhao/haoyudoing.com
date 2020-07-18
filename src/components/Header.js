@@ -17,11 +17,13 @@ export default function  Header(){
         alt="haoyudoing logo"
         
     />
-    </Link> </Navbar.Brand>
+    </Link> 
+    HAOYUDOING</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      
+    <Nav.Link ><Link to="/about">About</Link></Nav.Link>
+      <Nav.Link ><Link to="/contact">Contact</Link></Nav.Link>
       <NavDropdown title="Projects" id="basic-nav-dropdown">
         <NavDropdown.Item ><Link to="/events"activeStyle={{ color: "red" }}>Events</Link></NavDropdown.Item>
         <NavDropdown.Divider></NavDropdown.Divider>
@@ -30,9 +32,7 @@ export default function  Header(){
 
       </NavDropdown>
 
-      <Nav.Link ><Link to="/about">About</Link></Nav.Link>
-
-      <Nav.Link ><Link to="/contact">Contact</Link></Nav.Link>
+      
     </Nav>
     
   </Navbar.Collapse>
