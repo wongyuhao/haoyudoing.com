@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {Slide, Rotate} from 'react-reveal';
 
 const App = ()=>{
-  window.pageExitTime = 10000000
+  
   return (
     <Layout>
       <div className="container">
