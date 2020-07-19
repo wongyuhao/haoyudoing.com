@@ -21,14 +21,15 @@ export default function  Header(){
     </Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
-    <Nav.Link href=''><Link to="/about">About</Link></Nav.Link>
-      <Nav.Link href=''><Link to="/contact">Contact</Link></Nav.Link>
+  <Nav className="mr-auto">
+    <Nav.Link to="/about" as={Link}>About</Nav.Link>
+    <Nav.Link to="/contact" as={Link}>Contact</Nav.Link>
+    
       <NavDropdown title="Projects" id="basic-nav-dropdown">
-        <NavDropdown.Item ><Link to="/events"activeStyle={{ color: "red" }}>Events</Link></NavDropdown.Item>
+        <NavDropdown.Item to="/events" as={Link}>Events</NavDropdown.Item>
         <NavDropdown.Divider></NavDropdown.Divider>
-        <NavDropdown.Item ><Link to="/code">Code</Link></NavDropdown.Item>
-        <NavDropdown.Item ><Link to="/mk">MechKeys</Link></NavDropdown.Item>
+        <NavDropdown.Item to="/code" as={Link}>Code</NavDropdown.Item>
+        <NavDropdown.Item to="/mk" as={Link}>MechKeys</NavDropdown.Item>
 
       </NavDropdown>
 

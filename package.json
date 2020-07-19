@@ -23,17 +23,13 @@
     "gatsby": "^2.23.12",
     "gatsby-plugin-fontawesome-css": "^1.0.0",
     "gatsby-plugin-sass": "^2.3.12",
-    "gatsby-plugin-typography": "^2.5.10",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.12.0",
-    "react-reveal": "^1.2.2",
-    "react-typography": "^0.16.19",
-    "typography": "^0.16.19",
-    "typography-theme-fairy-gates": "^0.16.19"
+    "react-reveal": "^1.2.2"
   },
   "devDependencies": {
     "prettier": "2.0.5"

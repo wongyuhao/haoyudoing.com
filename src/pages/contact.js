@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 
 const contact = ()=>(
   <div>
-    <Layout>
+    <Layout theme="dark">
       This is a contact page
     </Layout>
   </div>
