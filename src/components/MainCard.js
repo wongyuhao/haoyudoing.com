@@ -1,60 +1,60 @@
 import React from 'react'
-import cardStyles from '../styles/cardStyles.module.scss'
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAddressCard,faKeyboard, faPaperPlane,faCode,faUserFriends} from '@fortawesome/free-solid-svg-icons'
-
-import {Fade} from 'react-reveal'
+import '../styles/index.scss'
 
 import {Link} from 'gatsby'
-const MainCard = () =>(
-  <div class="row justify-content-center ">
-    <div class="col-md-5">
-        <div class ='card h-100'>
-          <div class="card-body">
-            <p>
-              Hey there! I'm Hao and welcome to my site! 
-              <br/>
-              <br/>
-              Please forgive the white void everywhere as we are currently migrating from our old home.
-              <br/>
-              <br/>
-              In the meantime, you can visit the old site <a href="https://wongyuhao.github.io">here</a>
-            </p>
-          </div>
-        </div>
-    </div>
+import { Card, CardGroup, ListGroup} from 'react-bootstrap'
 
-  <div class="col-md-5">
-    <div class="card col-auto mx-auto" >
-      <div class="card-body ">
-       
-         <ul class="list-group list-group-flush">
-           <li  className='list-group-item list-group-item-action'>
-             <Link to="/about" ><FontAwesomeIcon icon={faAddressCard}/> About Me</Link>
-           </li>
-           <li  className='list-group-item list-group-item-action'>
-             <Link to="/code" ><FontAwesomeIcon icon={faCode}/> Code</Link>
-             </li>
-           <li  className='list-group-item list-group-item-action'>
-             <Link to="/events"><FontAwesomeIcon icon={faUserFriends}/> Events</Link>
-             </li>
-           <li  className='list-group-item list-group-item-action'>
-             <Link to="/mk"><FontAwesomeIcon icon={faKeyboard}/> Mechanical Keyboards</Link>
-             </li>
-           <li  className='list-group-item list-group-item-action'>
-             <Link to="/contact"><FontAwesomeIcon icon={faPaperPlane}/> Get in Touch</Link>
-             </li>
-         </ul>
+export default () =>(
+ <CardGroup style={{height:'100%', paddingTop:'1rem'}}>
+    <Card >
+     <Card.Body>
+        <p>
+          Hey there! I'm Hao and welcome to my site! 
+          <br/>
+          <br/>
+          Please forgive the white void everywhere as we are currently migrating from our old home.
+          <br/>
+          <br/>
+          In the meantime, you can visit the old site <a href="https://wongyuhao.github.io">here</a>
+        </p>
+      </Card.Body>
+    </Card>
+  
+ 
+    <Card className='col-auto mx-auto'>
+      
+     
+       <ListGroup variant='flush'>
+          <ListGroup.Item action as={Link} to="/about">
+           <FontAwesomeIcon icon={faAddressCard}/> About Me
+          </ListGroup.Item>
 
-      </div>
-    </div> 
-  </div>
+          <ListGroup.Item action as={Link} to="/code">
+           <FontAwesomeIcon icon={faCode}/> Code
+          </ListGroup.Item>
 
-  </div>
+          <ListGroup.Item action as={Link} to="/events">
+           <FontAwesomeIcon icon={faUserFriends}/> Events
+          </ListGroup.Item>
+
+          <ListGroup.Item action as={Link}to="/mk">
+           <FontAwesomeIcon icon={faKeyboard}/> MechKeys
+          </ListGroup.Item>
+
+          <ListGroup.Item action as={Link}to="/contatct">
+           <FontAwesomeIcon icon={faPaperPlane}/> Get in Touch
+          </ListGroup.Item>
+          
+        </ListGroup>
+      
+    </Card>
+  </CardGroup>
+  
  
 
  
 )
-
-export default MainCard

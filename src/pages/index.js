@@ -1,28 +1,32 @@
 import React from "react"
-import {Link} from 'gatsby'
 
-import HeaderAlt from '../components/HeaderAlt'
-import Footer from '../components/Footer'
+
+
 import MainCard from '../components/MainCard'
-
 import Layout from '../components/Layout'
+import {Container} from 'react-bootstrap'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
+import '../styles/index.scss'
+
 import {Slide} from 'react-reveal';
 
+
+
 const App = ()=>{
-  
+
   return (
-   <div>
+
+
+   
      <Layout>
-        <div className="container">
- 
+        <Container>
+
         <Slide bottom duration={400}>
           <MainCard/>
         </Slide>
-        </div>
+        </Container>
       </Layout>
-    </div>
+   
 
 
       
