@@ -9,7 +9,10 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-fontawesome-css`,
+<<<<<<< HEAD
     `gatsby-plugin-styled-components`
+=======
+>>>>>>> b797655cd1ff5065df844159549370ddddb4acb5
    
   
   ]

@@ -15,25 +15,38 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
+<<<<<<< HEAD
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@popperjs/core": "^2.4.4",
     "babel-plugin-styled-components": "^1.10.7",
+=======
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@popperjs/core": "^2.4.4",
+>>>>>>> b797655cd1ff5065df844159549370ddddb4acb5
     "bootstrap": "^4.5.0",
     "core-js": "^3.6.5",
     "gatsby": "^2.23.12",
     "gatsby-plugin-fontawesome-css": "^1.0.0",
     "gatsby-plugin-sass": "^2.3.12",
+<<<<<<< HEAD
     "gatsby-plugin-styled-components": "^3.3.10",
+=======
+>>>>>>> b797655cd1ff5065df844159549370ddddb4acb5
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.12.0",
+<<<<<<< HEAD
     "react-reveal": "^1.2.2",
     "styled-components": "^5.1.1"
+=======
+    "react-reveal": "^1.2.2"
+>>>>>>> b797655cd1ff5065df844159549370ddddb4acb5
   },
   "devDependencies": {
     "prettier": "2.0.5"
