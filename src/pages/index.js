@@ -1,10 +1,11 @@
 import React from "react"
 
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import MainCard from '../components/MainCard'
 import Layout from '../components/Layout'
 import {Container} from 'react-bootstrap'
+
 
 
 import {Slide} from 'react-reveal';
