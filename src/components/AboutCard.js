@@ -6,7 +6,7 @@ import headshot from '../images/headshot-272px.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMapMarkerAlt, faUniversity} from '@fortawesome/free-solid-svg-icons'
 
-import '../styles/about.scss'
+
 
 export default ()=>(
 
