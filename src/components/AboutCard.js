@@ -11,7 +11,6 @@ import '../styles/about.scss'
 export default ()=>(
 
 
-<<<<<<< HEAD
 <CardGroup className='mt-sm-2 mt-3 rounded bg-white shadow-lg'>
  <Card  className='col-md-3 text-center justify-content-center border-0 '>
    <Card.Body >
@@ -20,16 +19,6 @@ export default ()=>(
      
  </Card>
  <Card className='col-auto border-0 '>
-=======
-<CardGroup>
- <Card  className='col-md-3 text-center justify-content-center'>
-   <Card.Body >
-     <Image src={headshot} roundedCircle className='headshot'/>
-   </Card.Body>
-     
- </Card>
- <Card className='col-auto'>
->>>>>>> b797655cd1ff5065df844159549370ddddb4acb5
    <Card.Body>
    <Card.Title>
      <strong>Yu Hao</strong> <light>Wong</light>

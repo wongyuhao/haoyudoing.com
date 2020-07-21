@@ -3,7 +3,6 @@ import {Link} from 'gatsby'
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
 import logo from '../images/logo-100px.svg'
 
-<<<<<<< HEAD
 import styled from 'styled-components';
 
 const StyledNavbar = styled(Navbar)`
@@ -14,12 +13,6 @@ background-color:white;
 export default function  Header(){
   return(
   <StyledNavbar variant='light' expand="lg" className="sticky-top shadow-sm" >
-=======
-
-export default function  Header(){
-  return(
-  <Navbar bg="none" expand="lg" className="navbar-light sticky-top">
->>>>>>> b797655cd1ff5065df844159549370ddddb4acb5
   <Navbar.Brand> 
     <Link to="/">
     <img
@@ -56,10 +49,6 @@ export default function  Header(){
 
 
 
-<<<<<<< HEAD
 </ StyledNavbar>
-=======
-</Navbar>
->>>>>>> b797655cd1ff5065df844159549370ddddb4acb5
 )
   }
