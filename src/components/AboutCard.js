@@ -47,7 +47,7 @@ export default ()=>(
    
      
      Outisde of tech, my interests include sports, food, maker culture, and speed <small>(Both in Formula 1 and swimming)</small>. 
-     I'm always on the lookout for new experiences and oppurtunities, as well as connect with new people!
+     I’m constantly on the lookout for new experiences and opportunities, as well as the chance to connect with new people!
    </Card.Text>
    </Card.Body>
  </Card>
