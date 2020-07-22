@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub,faLinkedin,faInstagram,faTwitter} from '@fortawesome/free-brands-svg-icons'
+import { faGithub,faLinkedin,faInstagram,faTwitter, faFacebook} from '@fortawesome/free-brands-svg-icons'
 
 
 const StyledButton = styled(Button)`
@@ -18,16 +18,27 @@ const StyledButton = styled(Button)`
   width:300px;
  }
 
+ &:disabled{
+   color:white; 
+   background: gray;
+ }
+
+ &:focus{
+   background:white;
+   color:black;
+   
+ }
+
 `;
 
 const BtnGithub = styled(StyledButton)`
 &{
   color:white;
-  background-color:black;
+  background:#211F1F;
 }
 
-&:hover &:active{
-  background-color: #333333;
+&:hover {
+  background: #444444;
 }
 
 
@@ -36,7 +47,11 @@ const BtnGithub = styled(StyledButton)`
 const BtnLinkedin = styled(StyledButton)`
 &{
   color:white;
-  background-color:#0e76a8;
+  background:#0e76a8;
+}
+
+&:hover{
+  background:#0a597e;
 }
 `
 
@@ -48,13 +63,36 @@ const BtnInstagram = styled(StyledButton)`
   background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
   background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 }
+&:hover{
+  background: -moz-linear-gradient(70deg, #f09433 0%, #e6683c 15%, #dc2743 30%, #cc2366 55%, #bc1888 100%); 
+  background: -webkit-linear-gradient(70deg, #f09433 0%,#e6683c 15%,#dc2743 30%,#cc2366 55%,#bc1888 100%); 
+  background: linear-gradient(70deg, #f09433 0%,#e6683c 15%,#dc2743 30%,#cc2366 55%,#bc1888 100%); 
+}
 `
 
 const BtnTwitter = styled(StyledButton)`
 &{
   color:white;
-  background-color:#00acee;
+  background:#00acee;
 }
+
+&:hover{
+  background:#40c1f2;
+}
+
+
+`
+
+const BtnFacebook =styled(StyledButton)`
+&{
+  color:white;
+  background:#3b5998;
+}
+
+&:hover{
+  background:#546ea5;
+}
+
 `
 
 export default ()=>(
@@ -77,13 +115,19 @@ export default ()=>(
         <FontAwesomeIcon icon={faLinkedin}/> Linkedin
       </BtnLinkedin>
 
-      <BtnInstagram block disabled href='' target='_blank'>
+      <BtnInstagram block  href='https://www.instagram.com/wongyuhao/' target='_blank'>
         <FontAwesomeIcon icon={faInstagram}/> Instagram
       </BtnInstagram>
 
-      <BtnTwitter block disabled href='' target='_blank'>
+      <BtnTwitter block  href='https://twitter.com/haoyudoing' target='_blank'>
         <FontAwesomeIcon icon={faTwitter}/> Twitter
       </BtnTwitter>
+
+      <BtnFacebook block href='https://www.facebook.com/wongyuhao' target='_blank'>
+        <FontAwesomeIcon icon={faFacebook}/> Facebook
+      </BtnFacebook>
+
+
     </Col>
     </Row>
     </Card.Body>
