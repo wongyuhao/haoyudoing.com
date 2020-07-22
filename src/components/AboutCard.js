@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Container,Card, Image, Row, Col, CardGroup} from 'react-bootstrap'
+import {Card, Image, CardGroup} from 'react-bootstrap'
 import headshot from '../images/headshot-272px.jpg'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -29,6 +29,8 @@ export default ()=>(
    <Card.Subtitle className='mb-2 text-muted'>
    <FontAwesomeIcon icon={faUniversity}/> UW CSE 2024
    </Card.Subtitle>
+   
+
    <Card.Text>
      
      Hi there! My name is Hao and I'm a Computer Science student at the University of Washington!
