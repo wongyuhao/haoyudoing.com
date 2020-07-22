@@ -53,7 +53,7 @@ export default () =>(
            <FontAwesomeIcon icon={faKeyboard}/> MechKeys
           </ListGroup.Item>
 
-          <ListGroup.Item action as={Link}to="/contatct">
+          <ListGroup.Item action as={Link}to="/contact">
            <FontAwesomeIcon icon={faPaperPlane}/> Get in Touch
           </ListGroup.Item>
           
