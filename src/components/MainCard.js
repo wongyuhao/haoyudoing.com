@@ -8,9 +8,9 @@ import {Link} from 'gatsby'
 import { Card, CardGroup, ListGroup} from 'react-bootstrap'
 
 export default () =>(
- <CardGroup className='h-100  mt-5 pl-0 shadow bg-white rounded ' >
+ <CardGroup className='h-100  mt-3 pl-0 shadow bg-white rounded ' >
    
-    <Card className=' border-0 rounded'>
+    <Card className=' border-0 rounded '>
       
      <Card.Body>
 
@@ -33,14 +33,11 @@ export default () =>(
     </Card>
   
  
-    <Card className='col-md-auto border-0 '>
+    <Card className='col-md-auto border-top p-0'>
       
      
-       <ListGroup variant='flush'>
-          <ListGroup.Item action as={Link} to="/about">
-           <FontAwesomeIcon icon={faAddressCard}/> About Me
-          </ListGroup.Item>
-
+       <ListGroup variant='flush' className='m-0'>
+          
           <ListGroup.Item action as={Link} to="/code">
            <FontAwesomeIcon icon={faCode}/> Code
           </ListGroup.Item>

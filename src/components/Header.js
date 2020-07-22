@@ -6,13 +6,15 @@ import logo from '../images/logo-100px.svg'
 import styled from 'styled-components';
 
 const StyledNavbar = styled(Navbar)`
-background-color:white;
+&{
+  background:black
+}
 
 `
 
 export default function  Header(){
   return(
-  <StyledNavbar variant='light' expand="lg" className="sticky-top shadow-sm" >
+  <StyledNavbar  expand="lg" variant='dark' className="sticky-top shadow-sm  text-white mb-md-4 mb-sm-3"  >
   <Navbar.Brand> 
     <Link to="/">
     <img
@@ -28,16 +30,10 @@ export default function  Header(){
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
   <Nav className="mr-auto">
-    <Nav.Link to="/about" as={Link}>About</Nav.Link>
-    <Nav.Link to="/contact" as={Link}>Contact</Nav.Link>
     
-      <NavDropdown title="Projects" id="basic-nav-dropdown">
-        <NavDropdown.Item to="/events" as={Link}>Events</NavDropdown.Item>
-        <NavDropdown.Divider></NavDropdown.Divider>
-        <NavDropdown.Item to="/code" as={Link}>Code</NavDropdown.Item>
-        <NavDropdown.Item to="/mk" as={Link}>MechKeys</NavDropdown.Item>
-
-      </NavDropdown>
+    <Nav.Link to="/code" as={Link} className='text-white'>Code</Nav.Link>
+    <Nav.Link to="/mk" as={Link}>MechKeys</Nav.Link>
+      
 
       
     </Nav>
