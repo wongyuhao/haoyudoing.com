@@ -1,10 +1,12 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
+import ComingSoon from '../components/ComingSoon'
+
 const code = ()=>(
   <div>
     <Layout>
-      This is a code  page
+      <ComingSoon page='Coding projects'/>
     </Layout>
   </div>
 )

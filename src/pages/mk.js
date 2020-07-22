@@ -1,10 +1,12 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
+import ComingSoon from '../components/ComingSoon'
+
 const mk = ()=>(
   <div>
     <Layout>
-      This is an mk  page
+      <ComingSoon page='Keyboard projects'/>
     </Layout>
   </div>
 )

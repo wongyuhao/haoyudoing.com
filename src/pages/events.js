@@ -1,10 +1,12 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
+import ComingSoon from '../components/ComingSoon'
+
 const events = ()=>(
   <div>
     <Layout>
-      This is an events  page
+      <ComingSoon page='Events'/>
     </Layout>
   </div>
 )

@@ -13,11 +13,11 @@ const about = ()=>(
   <div>
     <Layout>
       <Container>
+
         <AboutCard/>
         <ProfilesCard/>
 
       </Container>
-
     </Layout>
   </div>
 )
