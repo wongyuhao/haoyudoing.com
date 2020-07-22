@@ -9,13 +9,21 @@ const StyledNavbar = styled(Navbar)`
 &{
   background:black
 }
+`
+
+const StyledNavLink = styled(Link)`
+&{
+  font-weight:bold;
+
+}
+
 
 `
 
 export default function  Header(){
   return(
-  <StyledNavbar  expand="lg" variant='dark' className="sticky-top shadow-sm  text-white mb-md-4 mb-sm-3"  >
-  <Navbar.Brand> 
+  <StyledNavbar  expand="lg" variant='dark' className="sticky-top shadow text-white mb-md-4 mb-sm-3"  >
+  <Navbar.Brand > 
     <Link to="/">
     <img
         src={logo}
@@ -31,8 +39,10 @@ export default function  Header(){
   <Navbar.Collapse id="basic-navbar-nav">
   <Nav className="mr-auto">
     
-    <Nav.Link to="/code" as={Link} className='text-white'>Code</Nav.Link>
-    <Nav.Link to="/mk" as={Link}>MechKeys</Nav.Link>
+    <Nav.Link to="/code" as={StyledNavLink} >Code</Nav.Link>
+    <Nav.Link to="/contact" as={StyledNavLink}>Contact</Nav.Link>
+    <Nav.Link to="/mk" as={StyledNavLink}>MechKeys</Nav.Link>
+    <Nav.Link to="/mk/gb" as={StyledNavLink}>Group Buys</Nav.Link>
       
 
       
