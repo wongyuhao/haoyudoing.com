@@ -2,30 +2,50 @@ import React from 'react'
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAddressCard,faKeyboard, faPaperPlane,faCode,faUserFriends} from '@fortawesome/free-solid-svg-icons'
+import { faKeyboard, faPaperPlane,faCode, faBoxOpen} from '@fortawesome/free-solid-svg-icons'
 
 import {Link} from 'gatsby'
-import { Card, CardGroup, ListGroup} from 'react-bootstrap'
+import { Card, CardGroup,ListGroup} from 'react-bootstrap'
+
+import styled from 'styled-components'
+
+const StyledLink = styled(Link)`
+ &{
+  padding:1rem 1rem;
+  font-weight: bold;
+  color:black;
+ }
+
+ &:focus{
+   background:black;
+   color:white;
+ }
+
+ &:hover{
+   text-decoration:none;
+   color:white;
+   background:#202020;
+ }
+
+`;
+
 
 export default () =>(
- <CardGroup className='h-100  mt-3 pl-0 shadow bg-white rounded ' >
+ <CardGroup className='h-100  mt-3 pl-0 shadow-lg bg-white rounded ' >
    
-    <Card className=' border-0 rounded '>
+    <Card className=' border-0 rounded'>
       
      <Card.Body>
 
        <Card.Title>
-        Welcome!
+        <strong>What's New?</strong>
       </Card.Title>
 
       <Card.Text>
-          Hey there! I'm Hao and welcome to my site! 
-          <br/>
-          <br/>
-          Please forgive the white void everywhere as we are currently migrating from our old home.
-          <br/>
-          <br/>
-          In the meantime, you can visit the old site <a href="https://wongyuhao.github.io">here</a>
+         We are currently migrating from our old site, which you can visit <a href="https://wongyuhao.github.io">here</a>.
+        <br/>
+        Check back soon!
+
       </Card.Text>
 
 
@@ -33,29 +53,17 @@ export default () =>(
     </Card>
   
  
-    <Card className='col-md-auto border-top p-0'>
-      
-     
-       <ListGroup variant='flush' className='m-0'>
+    <Card className='border-0 p-0 rounded '>
+      <Card.Body className='col-auto'>
+      <ListGroup>
+           <ListGroup.Item as={StyledLink} to='/code'><FontAwesomeIcon icon={faCode}/> Code</ListGroup.Item>
           
-          <ListGroup.Item action as={Link} to="/code">
-           <FontAwesomeIcon icon={faCode}/> Code
-          </ListGroup.Item>
+           <ListGroup.Item as={StyledLink} to='/mk'><FontAwesomeIcon icon={faKeyboard}/> Mechanical Keyboards</ListGroup.Item>
+           <ListGroup.Item as={StyledLink} to='/mk/gb'><FontAwesomeIcon icon={faBoxOpen}/> Group Buys</ListGroup.Item>
 
-          <ListGroup.Item action as={Link} to="/events">
-           <FontAwesomeIcon icon={faUserFriends}/> Events
-          </ListGroup.Item>
-
-          <ListGroup.Item action as={Link}to="/mk">
-           <FontAwesomeIcon icon={faKeyboard}/> MechKeys
-          </ListGroup.Item>
-
-          <ListGroup.Item action as={Link}to="/contact">
-           <FontAwesomeIcon icon={faPaperPlane}/> Get in Touch
-          </ListGroup.Item>
-          
-        </ListGroup>
-      
+           <ListGroup.Item as={StyledLink} to='/contact'><FontAwesomeIcon icon={faPaperPlane}/> Get in Touch</ListGroup.Item>
+      </ListGroup>
+      </Card.Body>
     </Card>
  
   </CardGroup>

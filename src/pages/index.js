@@ -6,7 +6,7 @@ import MainCard from '../components/MainCard'
 import AboutCard from '../components/AboutCard'
 import ProfilesCard from '../components/ProfilesCard'
 import Layout from '../components/Layout'
-import {Container} from 'react-bootstrap'
+
 
 
 
@@ -20,16 +20,14 @@ const App = ()=>{
 
 
    
-     <Layout>
-        <Container>
-
-        <Slide bottom duration={400}>
+     <Layout helmetTitle='Home'>
+       
+        <Slide bottom duration={1000}>
           <AboutCard/>
           <MainCard/>
           <ProfilesCard/>
         </Slide>
         
-        </Container>
       </Layout>
    
 

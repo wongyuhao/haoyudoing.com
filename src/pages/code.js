@@ -5,7 +5,7 @@ import ComingSoon from '../components/ComingSoon'
 
 const code = ()=>(
   <div>
-    <Layout>
+    <Layout helmetTitle='Code'>
       <ComingSoon page='Coding projects'/>
     </Layout>
   </div>

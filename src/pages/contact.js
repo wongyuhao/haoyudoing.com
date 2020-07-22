@@ -5,7 +5,7 @@ import ComingSoon from '../components/ComingSoon'
 
 const contact = ()=>(
   <div>
-    <Layout >
+    <Layout helmetTitle='Contact Me'>
       <ComingSoon page='Contact'/>
     </Layout>
   </div>

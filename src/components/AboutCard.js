@@ -40,7 +40,7 @@ export default ()=>(
 
    <Card.Text>
      
-     Hi there! My name is Hao and I'm a Computer Science student at the University of Washington! <br/>
+     Hi there! My name is Hao and I'm a Computer Science student at the <strong style={{color:'#4b2e83'}}>University of Washington</strong>! <br/>
      I'm a huge fan of technology that's not only aesthically pleasing but also functionally intuitive.<br/>
      <strong><em>haoyudoing.com</em></strong> is my way of showcasing my latest projects and endevours to the world.
      <br/><br/>
