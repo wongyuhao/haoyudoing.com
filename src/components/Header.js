@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 const StyledNavbar = styled(Navbar)`
 &{
-  background:black
+  background: #1a1d20   
 }
 `
 
