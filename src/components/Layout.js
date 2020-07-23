@@ -13,9 +13,9 @@ export  default function Layout(props){
           <meta charSet="utf-8" />
           <title>Haoyudoing?</title>
         </Helmet>
-      <div className='pb-3' >
+      <div>
         <Header />
-        <Container>
+        <Container className='mt-sm-2 mt-4'>
         {props.children}
         </Container>
       </div>

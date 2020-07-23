@@ -11,7 +11,7 @@ import {faMapMarkerAlt, faUniversity,faAddressCard} from '@fortawesome/free-soli
 export default ()=>(
 
 
-<CardGroup className='mt-sm-2 mt-3 rounded bg-white shadow-lg' >
+<CardGroup className=' rounded bg-white shadow-lg' >
  <Card  className='col-md-3 text-center justify-content-center border-0 '>
    <Card.Body >
      <Image src={headshot} roundedCircle className='p-1' style={{width:'200px'}}/>
