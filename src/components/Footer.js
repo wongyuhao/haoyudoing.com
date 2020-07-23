@@ -5,7 +5,7 @@ const StyledFooter = styled.footer`
   & {
   
     padding:1rem;
-
+    padding-top:3rem;
     font-size:0.9rem;
     font-family: monospace;
   
