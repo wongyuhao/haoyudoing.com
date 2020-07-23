@@ -7,7 +7,6 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub,faLinkedin,faInstagram,faTwitter, faFacebook} from '@fortawesome/free-brands-svg-icons'
 
-
 const StyledButton = styled(Button)`
  &{
   padding:1rem 2rem;
@@ -107,23 +106,23 @@ export default ()=>(
     <Card.Body className='mx-auto' > 
     <Row >
     <Col >
-      <BtnGithub  block href='https://www.github.com/wongyuhao' target='_blank' >
+      <BtnGithub  block href='https://www.github.com/wongyuhao' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faGithub}/> Github
       </BtnGithub>
 
-      <BtnLinkedin block href='https://www.linkedin.com/in/yu-hao-wong-b21901194/' target='_blank'>
+      <BtnLinkedin block href='https://www.linkedin.com/in/yu-hao-wong-b21901194/' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faLinkedin}/> Linkedin
       </BtnLinkedin>
 
-      <BtnInstagram block  href='https://www.instagram.com/wongyuhao/' target='_blank'>
+      <BtnInstagram block  href='https://www.instagram.com/wongyuhao/' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faInstagram}/> Instagram
       </BtnInstagram>
 
-      <BtnTwitter block  href='https://twitter.com/haoyudoing' target='_blank'>
+      <BtnTwitter block  href='https://twitter.com/haoyudoing' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faTwitter}/> Twitter
       </BtnTwitter>
 
-      <BtnFacebook block href='https://www.facebook.com/wongyuhao' target='_blank'>
+      <BtnFacebook block href='https://www.facebook.com/wongyuhao' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faFacebook}/> Facebook
       </BtnFacebook>
 

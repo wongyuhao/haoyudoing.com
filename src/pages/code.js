@@ -1,13 +1,12 @@
 import React from 'react'
-import Layout from '../components/Layout'
 
 import ComingSoon from '../components/ComingSoon'
 
 const code = ()=>(
   <div>
-    <Layout helmetTitle='Code'>
+   
       <ComingSoon page='Coding projects'/>
-    </Layout>
+ 
   </div>
 )
 

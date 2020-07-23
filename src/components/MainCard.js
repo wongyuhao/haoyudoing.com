@@ -9,6 +9,7 @@ import { Card, CardGroup,ListGroup} from 'react-bootstrap'
 
 import styled from 'styled-components'
 
+
 const StyledLink = styled(Link)`
  &{
   padding:1rem 1rem;
@@ -31,7 +32,7 @@ const StyledLink = styled(Link)`
 
 
 export default () =>(
- <CardGroup className='h-100  mt-3 pl-0 shadow-lg bg-white rounded ' >
+ <CardGroup className='h-100  mt-3 pl-0 shadow-lg bg-white rounded '>
    
     <Card className=' border-0 rounded'>
       

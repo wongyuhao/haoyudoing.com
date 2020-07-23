@@ -3,15 +3,10 @@ import React from 'react'
 import {Card, Image, CardGroup} from 'react-bootstrap'
 import headshot from '../images/headshot-272px.jpg'
 
-import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMapMarkerAlt, faUniversity,faAddressCard} from '@fortawesome/free-solid-svg-icons'
 
-const styledAnchor = styled.p`
-  text-decoration: none;
-  color:purple;
-`
 
 export default ()=>(
 
@@ -31,10 +26,10 @@ export default ()=>(
      <strong>Yu Hao</strong> <light>Wong</light>
    </Card.Title>
    <Card.Subtitle className='mb-2'>
-    <a href='https://goo.gl/maps/UNfAH9WjwdX9YwbY6' target='_blank'><FontAwesomeIcon icon={faMapMarkerAlt}/> Kuala Lumpur, Malaysia</a>
+    <a href='https://goo.gl/maps/UNfAH9WjwdX9YwbY6' target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faMapMarkerAlt}/> Kuala Lumpur, Malaysia</a>
    </Card.Subtitle>
    <Card.Subtitle className='mb-2 '>
-    <a href='https://www.cs.washington.edu/' target='_blank'><FontAwesomeIcon icon={faUniversity}/> UW CSE 2024</a>
+    <a href='https://www.cs.washington.edu/' target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faUniversity}/> UW CSE 2024</a>
    </Card.Subtitle>
    
 

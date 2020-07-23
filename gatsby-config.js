@@ -7,10 +7,11 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    `gatsby-plugin-sass`,
+
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+  
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -18,6 +19,13 @@ module.exports = {
         short_name: `Hao`,
         start_url: `/`,
         icon:'src/images/logo.png'
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/Layout.js`),
       },
     },
    

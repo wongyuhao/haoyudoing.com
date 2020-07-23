@@ -11,7 +11,7 @@ export  default function Layout(props){
     <div>
       <Helmet>
           <meta charSet="utf-8" />
-          <title>{props.helmetTitle ? `Haoyudoing?  |  ${props.helmetTitle}`: 'Haoyudoing?'}</title>
+          <title>Haoyudoing?</title>
         </Helmet>
       <div className='pb-3' >
         <Header />

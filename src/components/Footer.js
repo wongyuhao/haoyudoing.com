@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
   & {
+  
     padding:1rem;
-    padding-bottom: 0;
+
     font-size:0.9rem;
     font-family: monospace;
   
@@ -15,7 +16,7 @@ const StyledFooter = styled.footer`
 export default function Footer (){
   return (
     
-    <StyledFooter className= "text-center static-bottom text-muted" >
+    <StyledFooter className= "text-center text-muted" >
       <p >Yu Hao Wong © 2020</p>
     </StyledFooter>
 

@@ -5,35 +5,19 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import MainCard from '../components/MainCard'
 import AboutCard from '../components/AboutCard'
 import ProfilesCard from '../components/ProfilesCard'
-import Layout from '../components/Layout'
+
+import {motion} from 'framer-motion'
 
 
 
 
-import {Slide} from 'react-reveal';
 
+export default  ()=>(
 
-
-const App = ()=>{
-
-  return (
-
-
-   
-     <Layout helmetTitle='Home'>
-       
-        <Slide bottom duration={1000}>
-          <AboutCard/>
-          <MainCard/>
-          <ProfilesCard/>
-        </Slide>
-        
-      </Layout>
-   
-
-
-      
-  )
-}
-
-export default App
+ <motion.div>
+      <AboutCard/>
+      <MainCard/>
+      <ProfilesCard/>
+ </motion.div>
+)
+  
