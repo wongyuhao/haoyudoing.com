@@ -1,9 +1,14 @@
 import React from 'react'
 import {Card} from 'react-bootstrap'
 
+const handleSubmit = event=>{
+  event.preventDefault();
+}
+
+
 export default ()=>(
   <Card>
-<form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+<form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" onSubmit={handleSubmit}>
   <input type="hidden" name="bot-field" />
   <input type="hidden" name="form-name" value="contact" />
 
