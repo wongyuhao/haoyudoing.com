@@ -1,35 +1,64 @@
 import React from 'react'
-import {Card} from 'react-bootstrap'
+import {Card, Form,Button,Col} from 'react-bootstrap'
 
-const handleSubmit = event=>{
-  event.preventDefault();
-}
+import styled from 'styled-components';
 
+const FormBtn = styled(Button)`
+margin:0.2rem;
+width:10rem;
+font-weight:bold;
+`
 
 export default ()=>(
-  <Card>
-<form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" onSubmit={handleSubmit}>
-  <input type="hidden" name="bot-field" />
-  <input type="hidden" name="form-name" value="contact" />
+  <Card className='border-0 shadow-lg '>
+    
+    <Card.Body>
 
-  <label>
-    Name
-    <input type="text" name="name" id="name" />
-  </label>
-  <label>
-    Email
-    <input type="email" name="email" id="email" />
-  </label>
-  <label>
-    Subject
-    <input type="text" name="subject" id="subject" />
-  </label>
-  <label>
-    Message
-    <textarea name="message" id="message" rows="5" />
-  </label>
-  <button type="submit">Send</button>
-  <input type="reset" value="Clear" />
-</form>
-</Card>
+      <h1 style={{fontFamily:'monospace',fontWeight:'bold'}}>Get in touch</h1>
+      <p style={{fontFamily:'monospace'}}> Shoot me an email and let's chat!</p>
+      
+      <hr/>
+      <Form action='/submitted' method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" >
+        
+        <Form.Control type="hidden" name="bot-field" />
+        <Form.Control type="hidden" name="form-name" value="contact" />
+
+        <Form.Row >
+
+          <Col sm='12'>
+            <Form.Group>
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" name="name" id="name" placeholder='Tim Apple' required/>
+            </Form.Group>
+          </Col>
+
+          <Col>
+            <Form.Group>
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" name="email" id="email" placeholder='example@host.com' required/>
+            </Form.Group>
+          </Col>
+
+        </Form.Row>
+
+        <Form.Group>
+          <Form.Label>Subject</Form.Label>
+          <Form.Control type="text" name="subject" id="subject" placeholder='Subject' required/>
+        </Form.Group>
+
+        <Form.Group>
+        <Form.Label> Message </Form.Label>
+          <Form.Control as='textarea' name="message" id="message" rows="5" placeholder="What's on your mind?" required/>
+        </Form.Group>
+
+
+   
+        <Form.Group className='text-center'>
+          <FormBtn variant='danger'type="reset" value="Clear">Clear</FormBtn>
+          <FormBtn variant='dark'type="submit">Send</FormBtn>
+        </Form.Group>
+     
+      </Form>
+    </Card.Body>
+  </Card>
 )
