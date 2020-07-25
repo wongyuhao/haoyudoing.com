@@ -9,6 +9,7 @@ export default () =>(
     <Card.Title>
       <strong>Form response recorded</strong>
     </Card.Title>
+    
     <Card.Text>
       I'll get back to you soon!
     </Card.Text>

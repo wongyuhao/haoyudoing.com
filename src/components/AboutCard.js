@@ -14,7 +14,7 @@ export default ()=>(
 <CardGroup className=' rounded bg-white shadow-lg' >
  <Card  className='col-md-3 text-center justify-content-center border-0 '>
    <Card.Body >
-     <Image src={headshot} roundedCircle className='p-1' style={{width:'100%'}}/>
+     <Image src={headshot} roundedCircle className='p-1' style={{width:'100%', maxWidth:'200px'}}/>
      <Card.Text className='pt-2 text-muted'><FontAwesomeIcon icon={faAddressCard}/> About Me</Card.Text>
    </Card.Body>
    
