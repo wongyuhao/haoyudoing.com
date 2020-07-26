@@ -114,15 +114,15 @@ export default ()=>(
         <FontAwesomeIcon icon={faLinkedin}/> Linkedin
       </BtnLinkedin>
 
-      <BtnInstagram block  href='https://www.instagram.com/wongyuhao/' target='_blank' rel="noopener noreferrer">
+      <BtnInstagram block disabled href='https://www.instagram.com/wongyuhao/' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faInstagram}/> Instagram
       </BtnInstagram>
 
-      <BtnTwitter block  href='https://twitter.com/haoyudoing' target='_blank' rel="noopener noreferrer">
+      <BtnTwitter block disabled href='https://twitter.com/haoyudoing' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faTwitter}/> Twitter
       </BtnTwitter>
 
-      <BtnFacebook block href='https://www.facebook.com/wongyuhao' target='_blank' rel="noopener noreferrer">
+      <BtnFacebook block  disabled href='https://www.facebook.com/wongyuhao' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faFacebook}/> Facebook
       </BtnFacebook>
 
