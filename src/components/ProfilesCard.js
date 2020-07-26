@@ -79,6 +79,11 @@ const BtnTwitter = styled(StyledButton)`
   background:#40c1f2;
 }
 
+&:disabled{
+   color:white; 
+   background: #bfeafb;
+ }
+
 
 `
 
@@ -91,6 +96,11 @@ const BtnFacebook =styled(StyledButton)`
 &:hover{
   background:#546ea5;
 }
+
+&:disabled{
+   color:white; 
+   background: #8497bf;
+ }
 
 `
 
