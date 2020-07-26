@@ -3,7 +3,7 @@ import {Card, Button, Col, Row} from 'react-bootstrap'
 
 import styled from "styled-components"
 
-
+import {Link} from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub,faLinkedin,faInstagram,faTwitter, faFacebook} from '@fortawesome/free-brands-svg-icons'
 
@@ -17,7 +17,7 @@ const StyledButton = styled(Button)`
   width:300px;
  }
 
- &:disabled{
+ &.disabled{
    color:white; 
    background: gray;
  }
@@ -67,6 +67,14 @@ const BtnInstagram = styled(StyledButton)`
   background: -webkit-linear-gradient(70deg, #f09433 0%,#e6683c 15%,#dc2743 30%,#cc2366 55%,#bc1888 100%); 
   background: linear-gradient(70deg, #f09433 0%,#e6683c 15%,#dc2743 30%,#cc2366 55%,#bc1888 100%); 
 }
+
+&.disabled{
+  color:white;
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg,#f6bc80 0%, #efa185 25%, #e9788a 50%, #df769f 75%, #d56fb5 100%); 
+  background: -webkit-linear-gradient(45deg,#f6bc80 0%, #efa185 25%, #e9788a 50%, #df769f 75%, #d56fb5 100%); 
+  background: linear-gradient(45deg,#f6bc80 0%, #efa185 25%, #e9788a 50%, #df769f 75%, #d56fb5 100%); 
+}
 `
 
 const BtnTwitter = styled(StyledButton)`
@@ -79,7 +87,7 @@ const BtnTwitter = styled(StyledButton)`
   background:#40c1f2;
 }
 
-&:disabled{
+&.disabled{
    color:white; 
    background: #bfeafb;
  }
@@ -97,7 +105,7 @@ const BtnFacebook =styled(StyledButton)`
   background:#546ea5;
 }
 
-&:disabled{
+&.disabled{
    color:white; 
    background: #8497bf;
  }
@@ -124,17 +132,25 @@ export default ()=>(
         <FontAwesomeIcon icon={faLinkedin}/> Linkedin
       </BtnLinkedin>
 
+
+      <hr className='mb-2'/>
+      <div style={{fontWeight:'bold',textAlign:'center'}} className='mb-2'><Link to='/contact'>Contact me</Link> to connect!</div>
+      
+
       <BtnInstagram block disabled href='https://www.instagram.com/wongyuhao/' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faInstagram}/> Instagram
       </BtnInstagram>
-
+    
       <BtnTwitter block disabled href='https://twitter.com/haoyudoing' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faTwitter}/> Twitter
       </BtnTwitter>
-
+ 
       <BtnFacebook block  disabled href='https://www.facebook.com/wongyuhao' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faFacebook}/> Facebook
       </BtnFacebook>
+      
+
+      
 
 
     </Col>
