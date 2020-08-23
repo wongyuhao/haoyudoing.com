@@ -37,11 +37,11 @@ export default ()=>(
      
      Hi there! My name is Hao and I'm a Computer Science student at the <strong style={{color:'#4b2e83'}}>University of Washington</strong>! <br/>
      I'm a huge fan of technology that's not only aesthically pleasing but also functionally intuitive.<br/>
-     <strong><em>haoyudoing.com</em></strong> is my way of showcasing my latest projects and endevours to the world.
+     <strong><em>haoyudoing.com</em></strong> is my way of showcasing my latest projects and endeavours to the world.
      <br/><br/>
    
      
-     Outisde of tech, my interests include sports, food, maker culture, and speed <small>(Both in Formula 1 and swimming)</small>. 
+     Outisde of tech, my interests include sports,racing, food, maker culture. 
      I’m constantly on the lookout for new experiences and opportunities, as well as the chance to connect with new people!
    </Card.Text>
    </Card.Body>
