@@ -12,7 +12,7 @@ const Template = ({data, })=>{
         <Card.Body>
           
          <Card.Title>
-        <h1>{frontmatter.title}</h1>
+        <h1>MK</h1>
         <h2>{frontmatter.date}</h2>
         </Card.Title>
 

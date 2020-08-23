@@ -7,6 +7,7 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -32,9 +33,11 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages/md-pages`,
+
+        path: `${__dirname}/src/pages/md-pages/`,
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
