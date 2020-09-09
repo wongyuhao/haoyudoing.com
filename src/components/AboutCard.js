@@ -37,8 +37,8 @@ return(
    
      
  </Card>
- <Card className='col-auto border-0 pt-0'>
-   <Card.Body className='pt-sm-0'>
+ <Card className='col-auto border-0'>
+   <Card.Body >
    <Card.Title>
      <strong>Yu Hao</strong> Wong
    </Card.Title>
