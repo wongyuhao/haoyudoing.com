@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 import {Link} from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub,faLinkedin,faInstagram,faTwitter, faFacebook} from '@fortawesome/free-brands-svg-icons'
+import { faGithub,faLinkedin,faInstagram,faTwitter, faFacebook,faYoutube} from '@fortawesome/free-brands-svg-icons'
 
 const StyledButton = styled(Button)`
  &{
@@ -111,6 +111,22 @@ const BtnFacebook =styled(StyledButton)`
  }
 
 `
+const BtnYoutube =styled(StyledButton)`
+&{
+  color:white;
+  background:#FF0000;
+}
+
+&:hover{
+  background:#bf0000;
+}
+
+&.disabled{
+   color:white; 
+   background: #8497bf;
+ }
+
+`
 
 export default ()=>(
 
@@ -131,6 +147,10 @@ export default ()=>(
       <BtnLinkedin block href='https://www.linkedin.com/in/yu-hao-wong-b21901194/' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faLinkedin}/> Linkedin
       </BtnLinkedin>
+
+      <BtnYoutube block href='https://www.youtube.com/channel/UCFZ7gg-7lvW3G-tfcEYFkog' target='_blank' rel="noopener noreferrer">
+        <FontAwesomeIcon icon={faYoutube}/> YouTube
+      </BtnYoutube>
 
 
       <hr className='mb-2'/>
