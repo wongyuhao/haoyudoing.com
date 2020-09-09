@@ -40,13 +40,14 @@ export default function  Header(){
   <Nav className="mr-auto">
     
     <Nav.Link to="/code" as={StyledNavLink} >Code</Nav.Link>
-    <Nav.Link to="/contact" as={StyledNavLink}>Contact</Nav.Link>
     <Nav.Link to="/mk" as={StyledNavLink}>MechKeys</Nav.Link>
     <Nav.Link to="/mk/gb" as={StyledNavLink}>Group Buys</Nav.Link>
-      
-
-      
-    </Nav>
+  
+  </Nav>
+  <Nav>
+    <Nav.Link to="/contact" as={StyledNavLink}>Contact</Nav.Link>
+    <Nav.Link to="/about" as={StyledNavLink}>About</Nav.Link>
+  </Nav>
     
   </Navbar.Collapse>
   

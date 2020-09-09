@@ -32,7 +32,7 @@ return(
      
  </Card>
  <Card className='col-auto border-0 pt-0'>
-   <Card.Body>
+   <Card.Body className='pt-sm-0'>
    <Card.Title>
      <strong>Yu Hao</strong> Wong
    </Card.Title>
