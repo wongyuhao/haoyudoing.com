@@ -1,6 +1,7 @@
 import React from 'react'
 
 
+import WhatsNew from '../components/WhatsNew'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faKeyboard, faPaperPlane,faCode, faBoxOpen} from '@fortawesome/free-solid-svg-icons'
 
@@ -32,29 +33,23 @@ const StyledLink = styled(Link)`
 
 
 export default () =>(
- <CardGroup className='h-100  mt-3 pl-0 shadow-lg bg-white rounded '>
+ <CardGroup className='h-100 mt-3 pl-0 shadow-lg bg-white rounded ' >
    
-    <Card className=' border-0 rounded'>
+    <Card className=' border-0 rounded' >
       
-     <Card.Body>
+     <Card.Body className='pb-0'>
 
-       <Card.Title>
+       <Card.Title className='mb-1'>
         <strong>What's New?</strong>
       </Card.Title>
 
-      <Card.Text>
-         We are currently migrating from our old site, which you can visit <a href="https://wongyuhao.github.io">here</a>.
-        <br/>
-        Check back soon!
-
-      </Card.Text>
-
-
+      <WhatsNew />
+ 
       </Card.Body>
     </Card>
   
- 
-    <Card className='border-0 p-0 rounded '>
+
+    <Card className='border-0 p-0 rounded'>
       <Card.Body className='col-auto'>
       <ListGroup>
            <ListGroup.Item as={StyledLink} to='/code'><FontAwesomeIcon icon={faCode}/> Code</ListGroup.Item>

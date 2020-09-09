@@ -1,0 +1,10 @@
+fragment Code on Code {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  projectName
+  slug
+  description
+}

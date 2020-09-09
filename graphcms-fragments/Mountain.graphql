@@ -1,0 +1,14 @@
+fragment Mountain on Mountain {
+  status
+  updatedAt
+  createdAt
+  remoteId: id
+  title
+  image {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+  elevation
+}

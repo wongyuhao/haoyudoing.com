@@ -1,0 +1,20 @@
+fragment Asset on Asset {
+  status
+  updatedAt
+  createdAt
+  remoteId: id
+  handle
+  fileName
+  height
+  width
+  size
+  mimeType
+  imageMountain {
+    ... on Mountain {
+      remoteTypeName: __typename
+      remoteId: id
+    }
+  }
+  direction
+  url
+}

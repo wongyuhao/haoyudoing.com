@@ -38,6 +38,11 @@ export default  ({
 
 export const pageQuery = graphql`
   query {
+    gcms{
+      codes{
+       id
+      }
+    }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] },filter: { frontmatter: { category: { eq: "code" } } }) {
       
       edges {

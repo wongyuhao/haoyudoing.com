@@ -16,6 +16,15 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-manifest`,
     {
+      resolve:`gatsby-source-graphql`,
+      options:{
+        typeName: 'GraphCMS',
+        fieldName:'gcms',
+        url:'https://api-ap-northeast-1.graphcms.com/v2/cke73dv0pgsmj01xid076hy4t/master'
+      }
+    },
+   
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Haoyudoing`,

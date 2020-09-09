@@ -1,4 +1,6 @@
 import React from 'react'
+import {useStaticQuery,graphql} from 'gatsby'
+
 
 import {Card, Image, CardGroup} from 'react-bootstrap'
 import headshot from '../images/headshot-272px.jpg'
@@ -8,9 +10,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMapMarkerAlt, faUniversity,faAddressCard} from '@fortawesome/free-solid-svg-icons'
 
 
-export default ()=>(
-
-
+export default (  )=>{
+  const data = useStaticQuery(graphql`
+    query AboutQuery {
+      gcms {
+        abouts {
+          content{
+            html
+            markdown
+          }
+        }
+      }
+    }
+  `)
+ const about = data.gcms.abouts[0].content.html;
+return(
 <CardGroup className=' rounded bg-white shadow-lg' >
  <Card  className='col-md-3 text-center justify-content-center border-0 '>
    <Card.Body >
@@ -23,7 +37,7 @@ export default ()=>(
  <Card className='col-auto border-0 pt-0'>
    <Card.Body>
    <Card.Title>
-     <strong>Yu Hao</strong> <light>Wong</light>
+     <strong>Yu Hao</strong> Wong
    </Card.Title>
    <Card.Subtitle className='mb-2'>
     <a href='https://goo.gl/maps/UNfAH9WjwdX9YwbY6' target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faMapMarkerAlt}/> Kuala Lumpur, Malaysia</a>
@@ -33,20 +47,12 @@ export default ()=>(
    </Card.Subtitle>
    
 
-   <Card.Text>
-     
-     Hi there! My name is Hao and I'm a Computer Science student at the <strong style={{color:'#4b2e83'}}>University of Washington</strong>! <br/>
-     I'm a huge fan of technology that's not only aesthically pleasing but also functionally intuitive.<br/>
-     <strong><em>haoyudoing.com</em></strong> is my way of showcasing my latest projects and endeavours to the world.
-     <br/><br/>
-   
-     
-     Outisde of tech, my interests include sports,racing, food, maker culture. 
-     I’m constantly on the lookout for new experiences and opportunities, as well as the chance to connect with new people!
+   <Card.Text dangerouslySetInnerHTML={{__html: about}} >
+       
    </Card.Text>
    </Card.Body>
  </Card>
 
  </CardGroup>
-
 )
+}
