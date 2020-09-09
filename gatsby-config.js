@@ -4,6 +4,11 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   /* Your site config here */
   plugins: [
@@ -20,7 +25,7 @@ module.exports = {
       options:{
         typeName: 'GraphCMS',
         fieldName:'gcms',
-        url:'https://api-ap-northeast-1.graphcms.com/v2/cke73dv0pgsmj01xid076hy4t/master'
+        url: process.env.CMS_ENDPOINT
       }
     },
    
