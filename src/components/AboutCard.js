@@ -1,6 +1,6 @@
 import React from 'react'
 import {useStaticQuery,graphql} from 'gatsby'
-
+import ReactMarkdown from 'react-markdown'
 
 import {Card, Image, CardGroup} from 'react-bootstrap'
 import headshot from '../images/headshot-272px.jpg'
@@ -14,16 +14,13 @@ export default (  )=>{
   const data = useStaticQuery(graphql`
     query AboutQuery {
       gcms {
-        abouts {
-          content{
-            html
-            markdown
-          }
+        abouts (last: 1){
+          content
         }
       }
     }
   `)
- const about = data.gcms.abouts[0].content.html;
+
 return(
 <CardGroup className=' rounded bg-white shadow-lg' >
  <Card  className='col-md-3 text-center justify-content-center border-0 '>
@@ -47,9 +44,7 @@ return(
    </Card.Subtitle>
    
 
-   <Card.Text dangerouslySetInnerHTML={{__html: about}} >
-       
-   </Card.Text>
+   <ReactMarkdown source={data.gcms.abouts[0].content}/>
    </Card.Body>
  </Card>
 

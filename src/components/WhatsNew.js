@@ -9,14 +9,14 @@ import styled from 'styled-components'
 const UpdatesList = styled(ListGroup)`
   &{
     overflow: auto;
-    max-height: 21vh;
+    max-height: 200px;
     
 
   }
 
   @media (max-width: 576px) {
     &{
-      max-height:30vh;
+      max-height:35vh;
     }
   }
 `
