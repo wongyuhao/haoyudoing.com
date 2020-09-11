@@ -2,32 +2,45 @@ import React from 'react'
 import {Card, Col} from 'react-bootstrap'
 import CodeCard from '../components/CodeCard'
 
-import {graphql} from 'gatsby'
+import {useStaticQuery, graphql } from 'gatsby'
 
-
-export default  ({
-  data: {
-    allMarkdownRemark: { edges },
+export default  ()=>{
+const {gcms}= useStaticQuery(graphql`
+  query codeQuery {
+    gcms {
+      codes(orderBy: date_DESC) {
+        projectName
+        tags
+        description
+        thumbnail {
+          url(transformation: {document: {output: {format: jpg}}})
+      }
+      }
+    }
   }
-})=>(
+  
+`)
+
+return(
   <div>
-   <Card className='border-0 shadow'>
-     <Card.Body>
-      <h1 style={{fontFamily:'monospace',fontWeight:'bold'}}>Code</h1>
-      <p style={{fontFamily:'monospace'}}> Some of my 1's and 0's</p>
+   <Card className='border-0 shadow '>
+     <Card.Body className=' justify-content-between d-md-flex'>
+      <h2 className='d-inline'><strong>Coding Projects</strong></h2>
+      <h6 className='d-flex align-items-center pt-2'><em>Beep Boop. Some of my 1's and 0's</em></h6>
       </Card.Body>
    </Card>
    <Col className='px-0'>
   {
-    edges.map(
-      edge=>  
+    gcms.codes.map(
+      proj=>  
       <CodeCard
-      title={edge.node.frontmatter.title}
-      html={edge.node.html}
-      fluid={edge.node.frontmatter.thumbnail.childImageSharp.fluid}
-      tags={edge.node.frontmatter.tags}
-      source={edge.node.frontmatter.source}
-      demo={edge.node.frontmatter.demo}
+      key={proj.projectName}
+      title={proj.projectName}
+      md={proj.description}
+      img={proj.thumbnail}
+      tags={proj.tags.values}
+      source={proj.tags.source}
+      demo={proj.tags.demo}
       />
     )
 
@@ -35,38 +48,4 @@ export default  ({
    </Col>
    </div>
 )
-
-export const pageQuery = graphql`
-  query {
-    gcms{
-      codes{
-       id
-      }
-    }
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] },filter: { frontmatter: { category: { eq: "code" } } }) {
-      
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            slug
-            title
-            tags
-            source
-            demo
-            thumbnail{
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            
-          }
-        }
-      }
-    }
-  }
-`
+}

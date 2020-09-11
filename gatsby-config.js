@@ -44,13 +44,6 @@ module.exports = {
         component: require.resolve(`./src/components/Layout.js`),
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-
-        path: `${__dirname}/src/pages/md-pages/`,
-      },
-    },
 
     {
       resolve: `gatsby-source-filesystem`,

@@ -25,8 +25,6 @@ export default (  )=>{
       }
     }
   `)
-
-  console.log(data)
 return(
 <CardGroup className=' rounded bg-white shadow-lg' >
  <Card  className='col-md-3 text-center justify-content-center border-0 '>

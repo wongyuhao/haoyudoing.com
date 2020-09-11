@@ -1,10 +1,10 @@
 import React from 'react'
 import {Card,CardGroup, Button, Badge} from 'react-bootstrap'
-
-import Img from 'gatsby-image'
+import ReactMarkdown from 'react-markdown'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import styled from 'styled-components'
-
+import thumbNone from '../images/thumb-none.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub} from '@fortawesome/free-brands-svg-icons'
@@ -39,6 +39,7 @@ const styles={
     backgroundColor:'#f34b7d',
     color:'white'
   },
+ 
 }
 
 const StyledBtn = styled(Button)`
@@ -74,6 +75,7 @@ const BtnSource= styled(StyledBtn)`
 export default (props)=>{
   let source=<></>;
   let demo=<></>;
+  let thumbsrc=""
   if(props.source){
     source=<BtnSource href={props.source} target='_blank' rel='noreferrer noopener'> <FontAwesomeIcon icon={faGithub}/> Source Code</BtnSource>
   }else{
@@ -89,16 +91,18 @@ export default (props)=>{
     {demo}
   </div>
   
-
-
+  
+  thumbsrc = props.img != null ? props.img.url : thumbNone;
 
   return(
   <CardGroup className='border-0 shadow my-3'>
   <Card className='border-0 mx-auto justify-content-center' >
-    <Img fluid={{...props.fluid, aspectRatio:1.8}}/>
+    <LazyLoadImage src={thumbsrc} width='100%' alt={props.title} effect="blur"/>
+        
+   
   </Card>
   <Card className='border-0 '>
-    <Card.Body className='pt-sm-0 pt-md-3'>
+    <Card.Body className='pt-sm-0 pt-md-3 pb-0'>
       <Card.Title>
         <strong>{props.title}</strong>
       </Card.Title>
@@ -106,7 +110,8 @@ export default (props)=>{
       <Card.Subtitle className=''>
       {props.tags
 
-      .map(tag => <Badge 
+      .map((tag,i) => <Badge 
+                   key={i}
                    style={styles[tag]||styles['default']} 
                    className='mx-1'>{tag.toUpperCase()}
                    </Badge>)
@@ -115,7 +120,7 @@ export default (props)=>{
       
       </Card.Subtitle>
       <hr/>
-      <div dangerouslySetInnerHTML={{__html:props.html}}/>
+      <ReactMarkdown source={props.md} />
     
       
      

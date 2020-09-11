@@ -43,7 +43,7 @@ return (
    
     {data.gcms.updates.map(
       update=> 
-      <ListGroup.Item key={update.createdAt} className='p-1'>
+      <ListGroup.Item key={update.date} className='p-1'>
         <div className='d-flex flex-column'>
           <div className='w-100 pr-2 pl-1'style={{fontFamily:'monospace', fontSize:'0.8rem'}}><strong>{moment(update.date, "YYYY-MM-DD").format("DD MMM'YY")}</strong></div>
           <ReactMarkdown 
