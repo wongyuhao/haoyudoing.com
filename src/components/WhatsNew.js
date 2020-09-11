@@ -10,7 +10,8 @@ const UpdatesList = styled(ListGroup)`
   &{
     overflow: auto;
     max-height: 200px;
-    
+    border: 1px solid #dfdfdf;
+    border-radius: 50px;
 
   }
 
@@ -39,18 +40,18 @@ export default  ()=>{
 
 return (
   
-  <UpdatesList  className='rounded' >
+  <UpdatesList variant='flush' className='rounded' >
    
     {data.gcms.updates.map(
       update=> 
       <ListGroup.Item key={update.date} className='p-1'>
         <div className='d-flex flex-column'>
-          <div className='w-100 pr-2 pl-1'style={{fontFamily:'monospace', fontSize:'0.8rem'}}><strong>{moment(update.date, "YYYY-MM-DD").format("DD MMM'YY")}</strong></div>
+          <div className='w-100 pr-2 pl-1'style={{fontSize:'0.8rem', color:'#8c8e8f'}}><strong>{moment(update.date, "YYYY-MM-DD").format("DD MMM YYYY")}</strong></div>
           <ReactMarkdown 
             source={update.content.markdown}
             renderers={{
               paragraph: props => (
-                <p className='mb-0 ml-1 p-1' {...props} />
+                <p className='mb-0 ml-0 p-1'  {...props} />
               )
             }}
           />
