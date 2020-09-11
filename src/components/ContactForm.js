@@ -13,11 +13,11 @@ export default ()=>(
   <Card className='border-0 shadow-lg '>
     
     <Card.Body>
-
-      <h1 style={{fontFamily:'monospace',fontWeight:'bold'}}>Get in touch</h1>
-      <p style={{fontFamily:'monospace'}}> Shoot me an email and let's chat!</p>
-      
-      <hr/>
+    <div className='d-md-flex justify-content-between'>
+      <h1><strong>Get in touch</strong></h1>
+      <p className='d-flex align-items-center pt-3'>Shoot me an email and let's chat!</p>
+    </div>
+      <hr className='mt-0'/>
       <Form action='/submitted' method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" >
         
         <Form.Control type="hidden" name="bot-field" />
