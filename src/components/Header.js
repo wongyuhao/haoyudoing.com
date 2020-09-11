@@ -23,23 +23,25 @@ const StyledNavLink = styled(Link)`
 export default function  Header(){
   return(
   <StyledNavbar  expand="lg" variant='dark' className="sticky-top shadow text-white mb-md-4 mb-sm-3"  >
-  <Navbar.Brand > 
+  <Navbar.Brand className='d-flex flex-row p-0'> 
     <Link to="/">
     <img
         src={logo}
-        width="40"
-        height="40"
+        width="35"
+        height="35"
         className="d-inline-block align-top"
         alt="haoyudoing logo"
         
     />
-    </Link> 
+    
+    </Link>
+    <strong className='d-flex align-items-center m-0 pl-2 pt-0 pr-0' >haoyudoing.</strong>
     </Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
-  <Nav className="mr-auto">
+  <Nav className="mr-auto ">
     
-    <Nav.Link to="/code" as={StyledNavLink} >Code</Nav.Link>
+    <Nav.Link to="/code" as={StyledNavLink} className='pl-0'>Code</Nav.Link>
     <Nav.Link to="/mk" as={StyledNavLink}>MechKeys</Nav.Link>
     <Nav.Link to="/mk/gb" as={StyledNavLink}>Group Buys</Nav.Link>
   
