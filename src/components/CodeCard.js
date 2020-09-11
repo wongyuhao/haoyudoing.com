@@ -97,7 +97,12 @@ export default (props)=>{
   return(
   <CardGroup className='border-0 shadow my-3'>
   <Card className='border-0 mx-auto justify-content-center' >
-    <LazyLoadImage src={thumbsrc} width='100%' alt={props.title} effect="blur"/>
+    <LazyLoadImage 
+      src={thumbsrc} 
+      width='100%' 
+      alt={props.title} 
+      effect="blur"
+      />
         
    
   </Card>
