@@ -35,7 +35,7 @@ module.exports = {
         name: `Haoyudoing`,
         short_name: `Hao`,
         start_url: `/`,
-        icon:'src/images/logo.png'
+        icon:'src/images/logo-100px.svg'
       },
     },
     {
