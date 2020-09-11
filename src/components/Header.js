@@ -35,7 +35,7 @@ export default function  Header(){
     />
     
     </Link>
-    <strong className='d-flex align-items-center m-0 pl-2 pt-0 pr-0 pb-1' >haoyudoing.</strong>
+    <strong className='d-flex align-items-center m-0 pl-2 pt-0 pr-0' >haoyudoing.</strong>
     </Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
