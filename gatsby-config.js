@@ -28,7 +28,6 @@ module.exports = {
         url: process.env.CMS_ENDPOINT
       }
     },
-   
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
