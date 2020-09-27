@@ -134,7 +134,7 @@ export default ()=>(
     
   <Card className='mt-3 border-0 shadow-lg'>
     
-    <Card.Header className='text-center bg-dark text-white'>
+    <Card.Header className='text-center text-white' style={{backgroundColor:'#1a1d20'}}>
       <strong><em>Find me on other platforms:</em></strong>
     </Card.Header>
     <Card.Body className='mx-auto' > 
