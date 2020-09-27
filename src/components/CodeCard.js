@@ -1,8 +1,8 @@
 import React from 'react'
-import {Card,CardGroup, Button, Badge} from 'react-bootstrap'
+import {Card,CardGroup, Button, Badge, Image} from 'react-bootstrap'
 import ReactMarkdown from 'react-markdown'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
+import AutoFitImage from 'react-image-autofit-frame';
 import styled from 'styled-components'
 
 
@@ -70,7 +70,15 @@ const BtnSource= styled(StyledBtn)`
 
   
 `
+const AutoImageDiv = styled.div`
+&{
+  height:100%;
+}
 
+@media(max-width:576px){
+  height:20vh;
+}
+`
 
 export default (props)=>{
   let source=<></>;
@@ -96,25 +104,19 @@ export default (props)=>{
 
   return(
   <CardGroup className='border-0 shadow my-3'>
-  <Card className='border-0 mx-auto justify-content-center' >
-    <LazyLoadImage 
-      src={thumbsrc} 
-      width='100%' 
-      alt={props.title} 
-      effect="blur"
-      />
-        
-   
+  <Card className='border-0 mx-auto justify-content-center ' >
+    <AutoImageDiv>
+      <AutoFitImage imgSrc = {thumbsrc} />
+    </AutoImageDiv>
   </Card>
   <Card className='border-0 '>
-    <Card.Body className='pt-sm-0 pt-md-3 pb-0'>
+    <Card.Body className='pt-sm-0 pt-md-3 pt-lg-3  pb-0'>
       <Card.Title>
         <strong>{props.title}</strong>
       </Card.Title>
 
       <Card.Subtitle className=''>
       {props.tags
-
       .map((tag,i) => <Badge 
                    key={i}
                    style={styles[tag]||styles['default']} 
