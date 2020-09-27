@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import styled from 'styled-components'
-import thumbNone from '../images/thumb-none.png'
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub} from '@fortawesome/free-brands-svg-icons'
@@ -92,7 +92,7 @@ export default (props)=>{
   </div>
   
   
-  thumbsrc = props.img != null ? props.img.url : thumbNone;
+  thumbsrc = props.img != null ? props.img.url : props.none;
 
   return(
   <CardGroup className='border-0 shadow my-3'>

@@ -14,8 +14,13 @@ const {gcms}= useStaticQuery(graphql`
         description
         thumbnail {
           url(transformation: {document: {output: {format: jpg}}})
+        }
       }
+      asset(where: {id: "ckewcndbk0wnc0188azh3u767"}) {
+        id
+        url
       }
+      
     }
   }
   
@@ -38,6 +43,7 @@ return(
       title={proj.projectName}
       md={proj.description}
       img={proj.thumbnail}
+      none={gcms.asset.url}
       tags={proj.tags.values}
       source={proj.tags.source}
       demo={proj.tags.demo}
