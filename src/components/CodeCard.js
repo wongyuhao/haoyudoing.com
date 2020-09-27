@@ -117,8 +117,8 @@ export default (props)=>{
       </AutoImageDiv>
     </LazyLoadComponent>
   </Card>
-  <Card className='border-0 '>
-    <Card.Body className='pt-sm-0 pt-md-3 pt-lg-3  pb-0'>
+  <Card className='border-0  '>
+    <Card.Body className='pt-0 pt-md-3 pt-lg-3  pb-0'>
       <Card.Title>
         <strong>{props.title}</strong>
       </Card.Title>
