@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card,CardGroup, Button, Badge} from 'react-bootstrap'
+import {Card,CardGroup, Button, Badge, Image} from 'react-bootstrap'
 import ReactMarkdown from 'react-markdown'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -97,14 +97,15 @@ export default (props)=>{
   return(
   <CardGroup className='border-0 shadow my-3'>
   <Card className='border-0 mx-auto justify-content-center' >
-    <LazyLoadImage 
+    
+    <Image 
       src={thumbsrc} 
       width='100%' 
       alt={props.title} 
       effect="blur"
+      fluid
       />
-        
-   
+
   </Card>
   <Card className='border-0 '>
     <Card.Body className='pt-sm-0 pt-md-3 pb-0'>
@@ -114,7 +115,6 @@ export default (props)=>{
 
       <Card.Subtitle className=''>
       {props.tags
-
       .map((tag,i) => <Badge 
                    key={i}
                    style={styles[tag]||styles['default']} 
