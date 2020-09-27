@@ -1,7 +1,7 @@
 import React from 'react'
 import {Card,CardGroup, Button, Badge, Image} from 'react-bootstrap'
 import ReactMarkdown from 'react-markdown'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadComponent  } from 'react-lazy-load-image-component';
 import AutoFitImage from 'react-image-autofit-frame';
 import styled from 'styled-components'
 
@@ -85,9 +85,15 @@ export default (props)=>{
   let demo=<></>;
   let thumbsrc=""
   if(props.source){
-    source=<BtnSource href={props.source} target='_blank' rel='noreferrer noopener'> <FontAwesomeIcon icon={faGithub}/> Source Code</BtnSource>
+    source= <BtnSource href={props.source} target='_blank' rel='noreferrer noopener'> 
+              <FontAwesomeIcon icon={faGithub}/> 
+              Source Code
+            </BtnSource>
   }else{
-    source=<BtnSource disabled ><FontAwesomeIcon icon={faGithub}/> Source Code</BtnSource>
+    source= <BtnSource disabled >
+              <FontAwesomeIcon icon={faGithub}/> 
+              Source Code
+            </BtnSource>
   }
   if(props.demo){
     demo=<StyledBtn href={props.demo}  target='_blank' rel='noreferrer noopener'><FontAwesomeIcon icon={faLaptopCode}/> Live Demo</StyledBtn>
@@ -105,9 +111,11 @@ export default (props)=>{
   return(
   <CardGroup className='border-0 shadow my-3'>
   <Card className='border-0 mx-auto justify-content-center ' >
-    <AutoImageDiv>
-      <AutoFitImage imgSrc = {thumbsrc} />
-    </AutoImageDiv>
+    <LazyLoadComponent>
+      <AutoImageDiv>
+        <AutoFitImage imgSrc = {thumbsrc} />
+      </AutoImageDiv>
+    </LazyLoadComponent>
   </Card>
   <Card className='border-0 '>
     <Card.Body className='pt-sm-0 pt-md-3 pt-lg-3  pb-0'>
