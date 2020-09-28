@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import moment from 'moment'
 
 const StyledFooter = styled.footer`
   & {
@@ -17,7 +18,7 @@ export default function Footer (){
   return (
     
     <StyledFooter className= "text-center text-muted" >
-      <p >Yu Hao Wong © 2020</p>
+      <p >Yu Hao Wong © {moment().year()}</p>
     </StyledFooter>
 
   )

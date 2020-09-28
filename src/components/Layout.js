@@ -4,11 +4,16 @@ import Footer from './Footer'
 
 import {Helmet} from 'react-helmet'
 import {Container} from 'react-bootstrap'
+import SimpleReactLightbox from 'simple-react-lightbox'
+import ScrollToTop from "react-scroll-to-top";
+import AngleUp from '../images/angle-up-solid.svg'
 
 
 export  default function Layout(props){
   return (
-    <div>
+   
+      <SimpleReactLightbox>
+        <ScrollToTop smooth component={<img src={AngleUp}/>} />
       <Helmet>
           <meta charSet="utf-8" />
           <title>Haoyudoing?</title>
@@ -20,6 +25,7 @@ export  default function Layout(props){
         </Container>
       </div>
     <Footer />
-    </div>
+    </SimpleReactLightbox>
+  
   )
 }
