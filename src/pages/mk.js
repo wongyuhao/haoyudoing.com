@@ -1,7 +1,6 @@
 import React from 'react'
 import {Card, Container, Row, Col} from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faKeyboard} from '@fortawesome/free-solid-svg-icons'
+import {useStaticQuery, graphql, navigate, Link} from 'gatsby'
 import styled from 'styled-components'
 
 const MkHeader = styled.div`
@@ -24,7 +23,21 @@ const MkHeader = styled.div`
 }
 `
 
-const mk = ()=>(
+export default ()=>{
+  const {gcms:{mkbuildlogs}}= useStaticQuery(graphql`
+  query mkQuery {
+    gcms {
+      mkbuildlogs {
+        id
+        slug
+        boardName
+      }
+    }
+  }
+  
+`)
+  
+  return(
   <>
 
     <Card className='border-0 shadow '>
@@ -34,11 +47,12 @@ const mk = ()=>(
         <p style={{fontStyle:'italic'}} className='mb-1 pb-1 align-items-end'>a.k.a. that hobby I've given up on explaining</p>
       </MkHeader>
       <hr className='w-100 h-100'/>
-      hello there
+      {mkbuildlogs.map(
+        mk=> <Link to={`/mk/${mk.slug}`}>{mk.boardName}</Link>
+      )}
       </Card.Body>
    </Card>
 
   </>
 )
-
-export default mk
+}

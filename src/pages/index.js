@@ -13,10 +13,11 @@ import ProfilesCard from '../components/ProfilesCard'
 
 
 export default  ()=>(
-<>
+
+     <>
      <AboutCard/>
      <MainCard/>
      <ProfilesCard/>
-</>
+     </>
 )
   
