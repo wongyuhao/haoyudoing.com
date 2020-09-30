@@ -13,7 +13,7 @@ const renderers = {
   image: ({alt,src,title,}) => (
     
     <div style={{width:'100%'}} className='d-flex justify-content-center py-4'>
-      <Card className='border-0 shadow-sm rounded'>
+      <Card className='border-0 shadow rounded'>
         <div className='text-center'>
           <img style={{maxHeight:'60vh',maxWidth:'100%'}} src ={src} alt={alt} title={title}/>
         </div>
@@ -24,7 +24,7 @@ const renderers = {
     </div>
     
   ),
-  paragraph: props => <div className='px-sm-2 px-md-3 px-lg-4 px-xl-5' style={{fontSize:'1.1em'}} {...props} />,
+  paragraph: props => <div className='px-sm-2 px-md-3 px-lg-4 px-xl-5' style={{fontSize:'1.15em'}} {...props} />,
 
 };
 
@@ -59,7 +59,7 @@ export default ({data:{gcms:{mk}}})=>{
      <Card.Body className='pb-5 mb-5'>
       <Row>
 
-      <Col className='col-12  col-lg-4 pb-3'>
+      <Col className='col-12  col-lg-6 pb-3'>
         <Card.Title style={{fontWeight:700,fontSize:'3em', fontFamily:'monospace', marginBottom:'2px'}}>
           {mk.boardName}
           <p className='text-muted ' style={{fontFamily:'monospace',fontSize:'1rem'}}>{moment(mk.buildDate, "YYYY-MM-DD").format("DD MMM YYYY")}</p>
