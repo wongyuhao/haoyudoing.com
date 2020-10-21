@@ -87,12 +87,12 @@ export default (props)=>{
   if(props.source){
     source= <BtnSource href={props.source} target='_blank' rel='noreferrer noopener'> 
               <FontAwesomeIcon icon={faGithub}/> 
-              Source Code
+              {' '}Source Code
             </BtnSource>
   }else{
     source= <BtnSource disabled >
               <FontAwesomeIcon icon={faGithub}/> 
-              Source Code
+              {' '}Source Code
             </BtnSource>
   }
   if(props.demo){
