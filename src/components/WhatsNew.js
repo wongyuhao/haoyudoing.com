@@ -27,7 +27,7 @@ export default  ()=>{
   const data= useStaticQuery(graphql`
   query MyQuery {
     gcms {
-      updates(orderBy: updatedAt_DESC, last: 5) {
+      updates(orderBy: updatedAt_DESC, first: 10) {
         content{
           markdown
         }
