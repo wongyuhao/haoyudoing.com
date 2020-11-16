@@ -17,10 +17,9 @@ export default (  )=>{
         abouts (last: 1){
           content
         }
-        assets(where: {fileName_contains: "headshot"}, last:1) {
-          fileName
-          url(transformation: {document: {output: {format: svg}}})
-        
+        asset(where: {id: "ckhkobguw1qet0a878tlnkfhk"}) {
+          id
+          url
         }
       }
     }
@@ -29,7 +28,7 @@ return(
 <CardGroup className=' rounded bg-white shadow-lg' >
  <Card  className='col-md-3 text-center justify-content-center border-0 '>
    <Card.Body >
-     <Image src={data.gcms.assets[0].url} roundedCircle className='p-1' style={{width:'100%', maxWidth:'200px'}}/>
+     <Image src={data.gcms.asset.url} roundedCircle className='p-1' style={{width:'100%', maxWidth:'200px'}}/>
      <Card.Text className='pt-2 text-muted'><FontAwesomeIcon icon={faAddressCard}/> About Me</Card.Text>
    </Card.Body>
    
