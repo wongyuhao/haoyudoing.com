@@ -19,6 +19,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@popperjs/core": "^2.4.4",
+    "animate.css": "^4.1.1",
     "babel-plugin-styled-components": "^1.10.7",
     "bootstrap": "^4.5.0",
     "core-js": "^3.6.5",
@@ -45,6 +46,7 @@
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
     "react": "^16.12.0",
+    "react-able-player": "^4.1.0",
     "react-bootstrap": "^1.2.2",
     "react-custom-scroller": "^1.0.0",
     "react-dom": "^16.12.0",
@@ -53,9 +55,12 @@
     "react-image-lightbox": "^5.1.1",
     "react-lazy-load-image-component": "^1.5.0",
     "react-markdown": "^4.3.1",
+    "react-player": "^2.6.2",
     "react-scroll-to-top": "^1.0.5",
+    "react-tiny-link": "^3.6.0",
     "simple-react-lightbox": "^3.3.4-1",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "webvtt-player": "0.0.15"
   },
   "devDependencies": {
     "prettier": "2.0.5"
