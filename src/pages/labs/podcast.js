@@ -1,8 +1,12 @@
 import React from 'react';
-import {useStaticQuery} from 'gatsby'
+import {useStaticQuery, graphql} from 'gatsby'
 import ReactPlayer from 'react-player/lazy';
 import styled from 'styled-components';
-import {Container, Col, Row, Card} from 'react-bootstrap';
+import moment from 'moment'
+import {Container, Col, Row, Card, Button, CardGroup} from 'react-bootstrap';
+
+
+
 
 export default () => {
   const {gcms: {podcast}} = useStaticQuery(graphql`
@@ -12,7 +16,7 @@ export default () => {
       id
       sourceUrl
       linkdump
-      publishedAt
+      createdAt
       description
       title
       episodeNumber
@@ -20,41 +24,57 @@ export default () => {
   }
   }`)
 
+  console.log(podcast.linkdump.links);
   return (
     <Container>
-      {console.log()}
-      
-       
-        <Col>
-        <h1>{podcast.title}</h1>
-        <h3>Episode {podcast.episodeNumber}</h3>
+      <Row>
+        <Col className='col-12 col-md-7 col-lg-7'>
+          <Card className='border-0 shadow rounded'>
+            <div className='d-flex flex-row nowrap align-items-center justify-content-between px-3 py-3 '>
+              <h3><strong>{podcast.title}</strong></h3>
+              <h2>#{podcast.episodeNumber}</h2>
+            </div>
+          
+            
+          </Card>
+        <Card>
           <ReactPlayer
             url={podcast.sourceUrl}
             controls
             width='100%'
+            
             />
+            <Card.Footer>
+            <strong className='p-0 m-0 text-muted'>Recorded {moment(podcast.createdAt, "YYYY-MM-DD").format("DD MMMM 'YY")}</strong>
+            </Card.Footer>
+          </Card>
         </Col>
+        
         <Col>
+        <scrollDiv>
         <Card className='border-0 shadow rounded mb-3'><Card.Body><Card.Text>
         {podcast.description}
         </Card.Text></Card.Body></Card>
 
         <Card className='border-0 shadow rounded '><Card.Body>
           <Card.Title>
-          More interesting stuff:
-          <hr/>
+            <em>Read more:</em>
+      
           </Card.Title>
-          <Card.Text className='d-flex flex-column'>
+          <Card.Body className='d-flex flex-column p-0 pb-2'>
             {podcast.linkdump.links.map(
               (link,i) => (
-              <a href={link.url} key={i}>{link.title}</a>
+                <Card className='p-3 my-1 shadow-sm border-0' key={i}  >
+                  <a href={link.url} target="_blank"  rel='noreferrer noopener' >{link.title}</a>
+                </Card>
               )
             )}
-          </Card.Text>
+          </Card.Body>
         
         </Card.Body></Card>
+        </scrollDiv>
         </Col>
-
+      </Row>
 
 
 
