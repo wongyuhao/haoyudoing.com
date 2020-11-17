@@ -21,6 +21,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-manifest`,
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+         "G-BKNNNW7NS9"
+        ]
+      }
+    },
+    {
       resolve:`gatsby-source-graphql`,
       options:{
         typeName: 'GraphCMS',
