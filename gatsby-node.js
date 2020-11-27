@@ -1,4 +1,7 @@
+
+
 exports.createPages = async({graphql, actions:{createPage}})=>{
+ 
   const {data: {gcms: {mkbuildlogs}}} = await graphql(`
   {
     gcms{
