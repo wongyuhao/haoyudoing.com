@@ -13,7 +13,7 @@ import styled from 'styled-components'
 
 const StyledLink = styled(Link)`
  &{
-  padding:1rem 1rem;
+  padding:1.6rem 1rem;
   font-weight: bold;
   color:black;
  }
@@ -49,14 +49,13 @@ export default () =>(
     </Card>
   
 
-    <Card className='border-0 p-0 rounded'>
+    <Card className='border-0 p-0 py-1 rounded'>
       <Card.Body className='col-auto'>
       <ListGroup>
            <ListGroup.Item as={StyledLink} to='/code'><FontAwesomeIcon icon={faCode}/> Code</ListGroup.Item>
           
            <ListGroup.Item as={StyledLink} to='/mk'><FontAwesomeIcon icon={faKeyboard}/> Mechanical Keyboards</ListGroup.Item>
-           <ListGroup.Item as={StyledLink} to='/mk/gb'><FontAwesomeIcon icon={faBoxOpen}/> Group Buys</ListGroup.Item>
-
+           
            <ListGroup.Item as={StyledLink} to='/contact'><FontAwesomeIcon icon={faPaperPlane}/> Get in Touch</ListGroup.Item>
       </ListGroup>
       </Card.Body>

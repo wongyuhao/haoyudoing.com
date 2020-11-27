@@ -43,7 +43,7 @@ export default function  Header(){
     
     <Nav.Link to="/code" as={StyledNavLink} className='pl-0'>Code</Nav.Link>
     <Nav.Link to="/mk" as={StyledNavLink}>MechKeys</Nav.Link>
-    <Nav.Link to="/mk/gb" as={StyledNavLink}>Group Buys</Nav.Link>
+    
   
   </Nav>
   <Nav>
