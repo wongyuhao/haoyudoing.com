@@ -10,37 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub} from '@fortawesome/free-brands-svg-icons'
 import { faLaptopCode} from '@fortawesome/free-solid-svg-icons'
 
-const styles={
-  'default':{
-    backgroundColor:'black',
-    color:'white'
-  },
-  "html":{
-    backgroundColor:'#e44b23',
-    color:'white'
-  },
-  "css":{
-    backgroundColor:'#563d7c',
-    color:'white'
-  },
-  "js":{
-    backgroundColor:'#f1e05a',
-    color:'black'
-  },
-  "ruby":{
-    backgroundColor:'#701516',
-    color:'white'
-  },
-  "java":{
-    backgroundColor:'#b07219',
-    color:'white'
-  },
-  "c++":{
-    backgroundColor:'#f34b7d',
-    color:'white'
-  },
- 
-}
+import {styles} from '../colors.js'
 
 const StyledBtn = styled(Button)`
 &{
@@ -127,7 +97,7 @@ export default (props)=>{
       {props.tags
       .map((tag,i) => <Badge 
                    key={i}
-                   style={styles[tag]||styles['default']} 
+                   style={styles[tag.toLowerCase()]||styles['default']} 
                    className='mx-1'>{tag.toUpperCase()}
                    </Badge>)
       
