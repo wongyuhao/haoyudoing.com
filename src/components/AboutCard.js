@@ -41,7 +41,7 @@ return(
    </Card.Title>
    
   <Card.Subtitle className='mb-2'>
-    <a href='https://www.google.com/maps/place/Seattle,+WA/' target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faMapMarkerAlt}/>Seattle, WA</a>
+    <a href='https://www.google.com/maps/place/Seattle,+WA/' target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faMapMarkerAlt}/> Seattle, WA</a>
    </Card.Subtitle>
    <Card.Subtitle className='mb-2 '>
     <a href='https://www.cs.washington.edu/' target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faUniversity}/> UW CSE 2024</a>
