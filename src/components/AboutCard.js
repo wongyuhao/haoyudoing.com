@@ -7,7 +7,7 @@ import {Card, Image, CardGroup} from 'react-bootstrap'
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faMapMarkerAlt, faUniversity,faAddressCard} from '@fortawesome/free-solid-svg-icons'
+import {faMapMarkerAlt, faUniversity,faAddressCard,faHome} from '@fortawesome/free-solid-svg-icons'
 
 
 export default (  )=>{
@@ -39,11 +39,15 @@ return(
    <Card.Title>
      <strong>Yu Hao</strong> Wong
    </Card.Title>
-   <Card.Subtitle className='mb-2'>
-    <a href='https://goo.gl/maps/UNfAH9WjwdX9YwbY6' target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faMapMarkerAlt}/> Kuala Lumpur, Malaysia</a>
+   
+  <Card.Subtitle className='mb-2'>
+    <a href='https://www.google.com/maps/place/Seattle,+WA/' target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faMapMarkerAlt}/>Seattle, WA</a>
    </Card.Subtitle>
    <Card.Subtitle className='mb-2 '>
     <a href='https://www.cs.washington.edu/' target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faUniversity}/> UW CSE 2024</a>
+   </Card.Subtitle>
+  <Card.Subtitle className='mb-2'>
+    <a href='https://goo.gl/maps/UNfAH9WjwdX9YwbY6' target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faHome}/> Kuala Lumpur, Malaysia</a>
    </Card.Subtitle>
    
 
