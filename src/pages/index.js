@@ -12,7 +12,7 @@ import ProfilesCard from '../components/ProfilesCard'
 
 
 
-export default  ()=>(
+export default ()=>(
 
      <>
      <AboutCard/>
