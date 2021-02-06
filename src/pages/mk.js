@@ -51,7 +51,9 @@ export default ()=>{
         <p style={{fontWeight:'bold', fontSize:'1.7em', margin:0}}>Mechanical Keyboards</p>
         <p style={{fontStyle:'italic'}} className='mb-1 pb-1 align-items-end'>a.k.a. that hobby I've given up on explaining</p>
       </MkHeader>
-        <a href="https://www.thestar.com.my/tech/tech-news/2020/07/27/malaysians-turn-hobbies-into-profitable-online-businesses-during-and-after-mco">
+        <a
+          target='_blank' rel="noopener noreferrer" 
+          href="https://www.thestar.com.my/tech/tech-news/2020/07/27/malaysians-turn-hobbies-into-profitable-online-businesses-during-and-after-mco">
           Read this article about my work here! (Paywall)
         </a>
       <hr className='w-100 h-100'/>
