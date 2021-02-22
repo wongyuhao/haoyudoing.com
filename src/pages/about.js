@@ -35,7 +35,7 @@ export default ({data:{gcms:{asset}}}) =>{
         >
           <div>
           <strong>
-            Resume
+            My Resume
           </strong>
           <em style={{'fontSize':'0.8em', paddingLeft:'1em'}} className='text-muted'>
             Last Updated {moment(asset.publishedAt, "YYYY-MM-DD").format("DD MMM YYYY")}
@@ -51,7 +51,10 @@ export default ({data:{gcms:{asset}}}) =>{
         </StyledCardTitle>
         
         <Collapse isOpened={resumeOpen}>
-          <iframe className='mt-2' src={asset.url} style={{height:'50vh', width:'100%'}}/>
+          <iframe className='mt-2' src={asset.url} style={{height:'71vh', width:'100%'}}/>
+          <a href={asset.url} target='_blank' rel="noopener noreferrer">
+            PDF not displaying correctly? View here
+          </a>
         </Collapse>
       </Card>
     </div>
