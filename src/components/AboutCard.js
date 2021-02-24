@@ -17,7 +17,7 @@ export default (  )=>{
         abouts (last: 1){
           content
         }
-        asset(where: {id: "ckhkobguw1qet0a878tlnkfhk"}) {
+        asset(where: {id: "ckjfbg4gofz010b47d8atatzl"}) {
           id
           url
         }
