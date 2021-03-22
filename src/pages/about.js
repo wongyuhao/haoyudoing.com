@@ -6,7 +6,7 @@ import {Collapse} from 'react-collapse';
 import moment from 'moment'
 import styled from 'styled-components';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faChevronDown, faChevronUp} from '@fortawesome/free-solid-svg-icons';
+import {faChevronDown, faChevronUp, faFileAlt} from '@fortawesome/free-solid-svg-icons';
 const StyledCardTitle = styled.div`
 &{
   font-size:1.2em;
@@ -33,6 +33,7 @@ export default ({data:{gcms:{asset}}}) =>{
           onClick={()=>toggleResumeOpen()}
         >
           <div>
+            <FontAwesomeIcon icon={faFileAlt} className='mr-3'/>
           <strong>
             My Resume
           </strong>
@@ -50,7 +51,7 @@ export default ({data:{gcms:{asset}}}) =>{
         </StyledCardTitle>
         
         <Collapse isOpened={resumeOpen}>
-          <iframe title='resume-pdf' className='mt-2' src={asset.url} style={{height:'71vh', width:'100%'}}/>
+          <iframe title='resume-pdf' className='mt-4' src={asset.url} style={{height:'71vh', width:'100%'}}/>
           <a href={asset.url} target='_blank' rel="noopener noreferrer">
             PDF not displaying correctly? View here
           </a>
