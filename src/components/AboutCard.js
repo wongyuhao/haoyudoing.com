@@ -10,14 +10,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMapMarkerAlt, faUniversity,faAddressCard,faHome} from '@fortawesome/free-solid-svg-icons'
 
 
-export default (  )=>{
+export default ()=>{
   const data = useStaticQuery(graphql`
     query AboutQuery {
       gcms {
         abouts (last: 1){
           content
         }
-        asset(where: {id: "ckjfbg4gofz010b47d8atatzl"}) {
+        assets(where: {fileName: "headshot.JPG.png"}) {
           id
           url
         }
@@ -28,7 +28,7 @@ return(
 <CardGroup className=' rounded bg-white shadow-lg' >
  <Card  className='col-md-3 text-center justify-content-center border-0 '>
    <Card.Body >
-     <Image src={data.gcms.asset.url} roundedCircle className='p-1' style={{width:'100%', maxWidth:'200px'}}/>
+     <Image src={data.gcms.assets[0].url} roundedCircle className='p-1' style={{width:'100%', maxWidth:'200px'}}/>
      <Card.Text className='pt-2 text-muted'><FontAwesomeIcon icon={faAddressCard}/> About Me</Card.Text>
    </Card.Body>
    
