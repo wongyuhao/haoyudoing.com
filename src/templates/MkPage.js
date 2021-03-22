@@ -1,7 +1,7 @@
 import React from 'react'
 import {Card, Table, Row , Col, Button} from 'react-bootstrap';
 import AutoFitImage from 'react-image-autofit-frame';
-import {graphql, navigate, Link} from 'gatsby'
+import {graphql} from 'gatsby'
 import ReactMarkdown from 'react-markdown';
 import { SRLWrapper } from "simple-react-lightbox";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

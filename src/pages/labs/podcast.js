@@ -1,9 +1,8 @@
 import React from 'react';
 import {useStaticQuery, graphql} from 'gatsby'
 import ReactPlayer from 'react-player/lazy';
-import styled from 'styled-components';
 import moment from 'moment'
-import {Container, Col, Row, Card, Button, CardGroup} from 'react-bootstrap';
+import {Container, Col, Row, Card} from 'react-bootstrap';
 
 
 
@@ -75,11 +74,6 @@ export default () => {
         </scrollDiv>
         </Col>
       </Row>
-
-
-
-
-
     </Container>
 
 

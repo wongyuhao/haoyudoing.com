@@ -1,6 +1,6 @@
 import React from 'react'
-import {Card, Container, Row, Col} from 'react-bootstrap'
-import {useStaticQuery, graphql, navigate, Link} from 'gatsby'
+import {Card} from 'react-bootstrap'
+import {useStaticQuery, graphql} from 'gatsby'
 import styled from 'styled-components'
 import MkCard from '../components/MkCard';
 

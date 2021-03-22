@@ -1,15 +1,9 @@
 import React from 'react';
 import {navigate} from 'gatsby';
-import {Card, Row, Col, CardGroup} from 'react-bootstrap';
-import styled from 'styled-components';
-import { LazyLoadComponent  } from 'react-lazy-load-image-component';
+import {Card, Row, Col} from 'react-bootstrap';
 import AutoFitImage from 'react-image-autofit-frame';
 
-
-
-
 export default (props)=>{
-
 
     return (
         <Card 
@@ -34,10 +28,6 @@ export default (props)=>{
                 <AutoFitImage frameWidth='100%' frameHeight='300px' imgSrc ={props.imgsrc}/>
             </Col>
             </Row>
-
-
         </Card>
-        
-
     )
 }

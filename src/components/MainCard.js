@@ -3,7 +3,7 @@ import React from 'react'
 
 import WhatsNew from '../components/WhatsNew'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faKeyboard, faPaperPlane,faCode, faBoxOpen} from '@fortawesome/free-solid-svg-icons'
+import { faKeyboard, faPaperPlane,faCode} from '@fortawesome/free-solid-svg-icons'
 
 import {Link} from 'gatsby'
 import { Card, CardGroup,ListGroup} from 'react-bootstrap'
