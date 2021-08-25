@@ -47,6 +47,7 @@ export default function  Header(){
   
   </Nav>
   <Nav>
+    <Nav.Link to="/resume" as={Link} style={{fontWeight: 'bold', color:'white'}}>Resume</Nav.Link>
     <Nav.Link to="/contact" as={StyledNavLink}>Contact</Nav.Link>
     <Nav.Link to="/about" as={StyledNavLink}>About</Nav.Link>
   </Nav>
