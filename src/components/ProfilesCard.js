@@ -152,9 +152,6 @@ export default ()=>(
         <FontAwesomeIcon icon={faYoutube}/> YouTube
       </BtnYoutube>
 
-      <BtnInstagram block href='https://www.instagram.com/dupogw/' target='_blank' rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faInstagram}/> <em>@dupogw</em>
-      </BtnInstagram>
 
 
       <hr className='mb-2'/>
