@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMapMarkerAlt, faUniversity,faAddressCard,faHome, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 
 
+
 export default ()=>{
   const data = useStaticQuery(graphql`
     query AboutQuery {
