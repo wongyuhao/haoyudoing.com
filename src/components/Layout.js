@@ -13,7 +13,7 @@ export  default function Layout(props){
   return (
    
     <SimpleReactLightbox>
-    <ScrollToTop smooth component={<img src={AngleUp}/>} />
+    <ScrollToTop smooth component={<img src={AngleUp} alt={'scroll-to-top'}/>} />
       <Helmet>
         <meta charSet="utf-8" />
         <title>Haoyudoing?</title>

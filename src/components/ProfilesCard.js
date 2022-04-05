@@ -153,6 +153,7 @@ export default ()=>(
       </BtnYoutube>
 
 
+
       <hr className='mb-2'/>
       <div style={{fontWeight:'bold',textAlign:'center'}} className='mb-2'><Link to='/contact'>Contact me</Link> to connect!</div>
       
@@ -168,6 +169,7 @@ export default ()=>(
       <BtnFacebook block  disabled href='https://www.facebook.com/wongyuhao' target='_blank' rel="noopener noreferrer">
         <FontAwesomeIcon icon={faFacebook}/> Facebook
       </BtnFacebook>
+      
       
 
       

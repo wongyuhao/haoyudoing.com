@@ -9,7 +9,7 @@ import styled from 'styled-components'
 const UpdatesList = styled(ListGroup)`
   &{
     overflow: auto;
-    max-height: 200px;
+    max-height: 280px;
     border: 1px solid #dfdfdf;
     border-radius: 50px;
 
